@@ -269,3 +269,7 @@ example (P Q : Prop) : P → Q ↔ ¬P ∨ Q := by
   by_cases h': P
   · right; exact h h'
   · left; assumption
+  rintro h h1
+  rcases h with h | h
+  · contradiction
+  · assumption
